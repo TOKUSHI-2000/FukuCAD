@@ -21,7 +21,8 @@ bl_info = {
     "location" : "3D View",
     "warning" : "",
     "suport" : "TESTING",
-    "category" : "Generic"
+    "category" : "Generic",
+    "doc_url" : "https://github.com/TOKUSHI-2000/FukuCAD/tree/main",
 }
 
 
