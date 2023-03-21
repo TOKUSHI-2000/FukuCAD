@@ -36,7 +36,7 @@ class AddSketchOperator(bpy.types.Operator):
         # The original script
         scene = context.scene
         for obj in scene.objects:
-            obj.location.x += 1.0
+            obj.location.x += 1.0 # type: ignore
 
         return {'FINISHED'}            # Lets Blender know the operator finished successfully.
 
