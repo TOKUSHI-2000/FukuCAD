@@ -18,10 +18,12 @@ class MyTool(WorkSpaceTool):
     bl_icon = "ops.generic.select_circle"
     bl_widget = None
     bl_keymap = (
-        ("view3d.select_circle", {"type": 'LEFTMOUSE', "value": 'PRESS'},
-         {"properties": [("wait_for_input", False)]}),
-        ("view3d.select_circle", {"type": 'LEFTMOUSE', "value": 'PRESS', "ctrl": True},
-         {"properties": [("mode", 'SUB'), ("wait_for_input", False)]}),
+        ("view3d.select_circle",
+            {"type": 'LEFTMOUSE', "value": 'PRESS'},
+            {"properties": [("wait_for_input", False)]}),
+        ("view3d.select_circle",
+            {"type": 'LEFTMOUSE', "value": 'PRESS', "ctrl": True},
+            {"properties": [("mode", 'SUB'), ("wait_for_input", False)]}),
     )
 
     def draw_settings(context, layout, tool):
@@ -43,9 +45,11 @@ class MyOtherTool(WorkSpaceTool):
     bl_icon = "ops.generic.select_lasso"
     bl_widget = None
     bl_keymap = (
-        ("view3d.select_lasso", {"type": 'LEFTMOUSE', "value": 'PRESS'}, None),
-        ("view3d.select_lasso", {"type": 'LEFTMOUSE', "value": 'PRESS', "ctrl": True},
-         {"properties": [("mode", 'SUB')]}),
+        ("view3d.select_lasso",
+            {"type": 'LEFTMOUSE', "value": 'PRESS'}, None),
+        ("view3d.select_lasso",
+            {"type": 'LEFTMOUSE', "value": 'PRESS', "ctrl": True},
+            {"properties": [("mode", 'SUB')]}),
     )
 
     def draw_settings(context, layout, tool):
@@ -76,7 +80,8 @@ class MyWidgetTool(WorkSpaceTool):
 
 
 def register():
-    bpy.utils.register_tool(MyTool, after={"builtin.scale_cage"}, separator=True, group=True)
+    bpy.utils.register_tool(
+        MyTool, after={"builtin.scale_cage"}, separator=True, group=True)
     bpy.utils.register_tool(MyOtherTool, after={MyTool.bl_idname})
     bpy.utils.register_tool(MyWidgetTool, after={MyTool.bl_idname})
 
