@@ -7,7 +7,7 @@ on:
       - '*.py'
 
 jobs:
-  lint: # 任意のジョブ名
+  lint: pep8_test
     name: Check the source code
     runs-on: ubuntu-latest
     steps:
