@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
+
 import bpy
-import tool_test as tool
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3 of the License, or
@@ -26,6 +27,7 @@ bl_info = {
     "doc_url": "https://github.com/TOKUSHI-2000/FukuCAD/tree/main",
 }
 
+import fuku_cad as tool
 
 class AddSketchOperator(bpy.types.Operator):
     bl_idname = "object.addsketch"
