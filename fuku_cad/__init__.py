@@ -27,7 +27,7 @@ bl_info = {
     "doc_url": "https://github.com/TOKUSHI-2000/FukuCAD/tree/main",
 }
 
-import fuku_cad as tool
+#from fuku_cad import tool_test as tool
 
 class AddSketchOperator(bpy.types.Operator):
     bl_idname = "object.addsketch"
@@ -64,4 +64,4 @@ def unregister():
 # to test the add-on without having to install it.
 if __name__ == "__main__":
     register()
-    tool.register()
+    #tool.register()
